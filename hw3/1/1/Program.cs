@@ -9,6 +9,10 @@ namespace _1
     {
         static void Main(string[] args)
         {
+            Stack stack = new Stack();
+            stack.Push(3);
+            stack.Push(4);
+            stack.Pop();
         }
     }
 }

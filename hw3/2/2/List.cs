@@ -23,6 +23,7 @@ namespace _2
         public void AddElement(int value)
         {
             ListElement newListElement = new ListElement();
+            newListElement.Value = value;
             if (firstElement == null)
             {
                 firstElement = newListElement;
