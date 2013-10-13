@@ -33,7 +33,6 @@ namespace StackCalculator
                 return 0;
             }
             int toDelete = head.Value;
-            StackElement pointer = head;
             head = head.Next;
             return toDelete;
         }
