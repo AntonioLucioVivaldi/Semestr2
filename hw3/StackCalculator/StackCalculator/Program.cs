@@ -9,13 +9,6 @@ namespace StackCalculator
     {
         static void Main(string[] args)
         {
-
-            Calculator calculator = new Calculator();
-            calculator.Push(10);
-            calculator.Push(20);
-            calculator.Push(40);
-            calculator.Divide();
-            Console.WriteLine(calculator.Result());
         }
     }
 }
