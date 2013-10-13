@@ -9,12 +9,13 @@ namespace StackCalculator
     {
         static void Main(string[] args)
         {
-            StackArray stack = new StackArray(25);
-            Calculator calc = new Calculator(stack);
-            Console.Write("Enter expression ");
-            string str = Console.ReadLine();
-            Console.WriteLine("Result is ");
-            Console.Write(calc.Realizator(str));
+
+            Calculator calculator = new Calculator();
+            calculator.Push(10);
+            calculator.Push(20);
+            calculator.Push(40);
+            calculator.Divide();
+            Console.WriteLine(calculator.Result());
         }
     }
 }

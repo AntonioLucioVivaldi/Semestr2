@@ -5,20 +5,21 @@ using System.Text;
 
 namespace StackCalculator
 {
-    public class Stack : IStack
+    public class ListStack : IStack
     {
         private class StackElement
         {
             public int Value { get; set; }
 
             public StackElement Next { get; set; }
+
         }
 
         private StackElement head = null;
 
         public void Push(int value)
         {
-            StackElement newStackElement = head;
+            StackElement newStackElement = new StackElement();
             newStackElement.Value = value;
             newStackElement.Next = head;
             head = newStackElement;
@@ -28,12 +29,13 @@ namespace StackCalculator
         {
             if (head == null)
             {
-                Console.WriteLine("Empty stack");
+                Console.WriteLine("Stack is empty");
                 return 0;
             }
-            StackElement toDelete = head;
-            head = toDelete.Next;
-            return toDelete.Value;
+            int toDelete = head.Value;
+            StackElement pointer = head;
+            head = head.Next;
+            return toDelete;
         }
     }
 }

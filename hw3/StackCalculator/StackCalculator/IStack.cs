@@ -5,7 +5,7 @@ using System.Text;
 
 namespace StackCalculator
 {
-    public interface IStack
+    interface IStack
     {
         void Push(int value);
 

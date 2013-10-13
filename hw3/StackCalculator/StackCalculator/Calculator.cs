@@ -5,56 +5,81 @@ using System.Text;
 
 namespace StackCalculator
 {
+
     public class Calculator
     {
-        private IStack newStack;
+        private IStack stack;
+        private int numericNumber;
 
-        public Calculator(IStack stack)
+        public Calculator()
         {
-            this.newStack = stack;
+            stack = new ListStack();
+            numericNumber = 0;
         }
 
-        public int Realizator(string str)
+        public void Push(int num)
         {
-            int temp = 0;
-            int number = 0;
-            int result = 0;
-            for (int i = 0; i < str.Length; i++)
+            stack.Push(num);
+            numericNumber++;
+        }
+
+        public void Add()
+        {
+            if (numericNumber < 2)
             {
-                if ((str[i] != '+') && (str[i] != '*') && (str[i] != '-') && (str[i] != '/') && (str[i] != ' '))
-                {
-                    number = (number * 10) + (int)str[i] - (int)'0';
-                }
-                else
-                {
-                    result = number;
-                    if (str[i] != ' ')
-                    {
-                        temp = newStack.Pop();
-                    }
-                    if (str[i] == '+')
-                    {
-                        result = temp + number;
-                    }
-                    if (str[i] == '-')
-                    {
-                        result = temp - number;
-                    }
-                    if (str[i] == '*')
-                    {
-                        result = temp * number;
-                    }
-                    if (str[i] == '/')
-                    {
-                        result = temp / number;
-                    }
-                    newStack.Push(result);
-                    result = 0;
-                    number = 0;
-                }
-                
+                Console.WriteLine("More number needed");
+                return;
             }
-            return newStack.Pop();
+            int num1 = stack.Pop();
+            int num2 = stack.Pop();
+            stack.Push(num1 + num2);
+            numericNumber = numericNumber - 2;
+        }
+
+        public void Subtract()
+        {
+            if (numericNumber < 2)
+            {
+                Console.WriteLine("More number needed");
+                return;
+            }
+            int num1 = stack.Pop();
+            int num2 = stack.Pop();
+            stack.Push(num1 - num2);
+            numericNumber = numericNumber - 2;
+        }
+
+        public void Multiply()
+        {
+            if (numericNumber < 2)
+            {
+                Console.WriteLine("More number needed");
+                return;
+            }
+            int num1 = stack.Pop();
+            int num2 = stack.Pop();
+            stack.Push(num1 * num2);
+            numericNumber = numericNumber - 2;
+        }
+
+        public void Divide()
+        {
+            if (numericNumber < 2)
+            {
+                Console.WriteLine("More number needed");
+                return;
+            }
+            int num1 = stack.Pop();
+            int num2 = stack.Pop();
+            stack.Push(num1 / num2);
+            numericNumber = numericNumber - 2;
+        }
+
+        public int Result()
+        {
+            numericNumber--;
+            return stack.Pop();
         }
     }
+
 }
