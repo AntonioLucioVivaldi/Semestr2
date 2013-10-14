@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "fibonacci", "fibonacci\fibonacci.csproj", "{16DB988C-B786-42FD-A4B9-9E40238C99F3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci", "fibonacci\Fibonacci.csproj", "{16DB988C-B786-42FD-A4B9-9E40238C99F3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonaccitests", "Fibonaccitests\Fibonaccitests.csproj", "{8F8DD470-3517-401A-A95B-CB37A86100C2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciTests", "Fibonaccitests\FibonacciTests.csproj", "{8F8DD470-3517-401A-A95B-CB37A86100C2}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{806F8CF0-CA33-4AD4-84E3-9E8A49D8C0C0}"
 	ProjectSection(SolutionItems) = preProject

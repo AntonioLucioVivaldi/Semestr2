@@ -45,13 +45,13 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="fibTest.cs" />
+    <Compile Include="FibonacciTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\fibonacci\fibonacci.csproj">
+    <ProjectReference Include="..\fibonacci\Fibonacci.csproj">
       <Project>{16DB988C-B786-42FD-A4B9-9E40238C99F3}</Project>
-      <Name>fibonacci</Name>
+      <Name>Fibonacci</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
