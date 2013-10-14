@@ -8,7 +8,7 @@ using Factorial;
 namespace FactorialTests
 {
     [TestClass]
-    public class Factorialtest
+    public class FactorialTest
     {
         [TestMethod]
         public void FactorialTest()
