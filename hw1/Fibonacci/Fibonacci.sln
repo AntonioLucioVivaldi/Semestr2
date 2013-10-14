@@ -1,0 +1,52 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fibonacci", "Fibonacci\Fibonacci.csproj", "{3F6435A1-9221-4AD4-99BA-190C2E27AA48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FibonacciTests", "FibonacciTests\FibonacciTests.csproj", "{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{F4CED754-7D75-44BD-9374-3AFEB6CB8E55}"
+	ProjectSection(SolutionItems) = preProject
+		Fibonacci.vsmdi = Fibonacci.vsmdi
+		Local.testsettings = Local.testsettings
+		TraceAndTestImpact.testsettings = TraceAndTestImpact.testsettings
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(TestCaseManagementSettings) = postSolution
+		CategoryFile = Fibonacci.vsmdi
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Debug|Mixed Platforms.Build.0 = Debug|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Debug|x86.ActiveCfg = Debug|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Debug|x86.Build.0 = Debug|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Release|Any CPU.ActiveCfg = Release|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Release|Mixed Platforms.Build.0 = Release|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Release|x86.ActiveCfg = Release|x86
+		{3F6435A1-9221-4AD4-99BA-190C2E27AA48}.Release|x86.Build.0 = Release|x86
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}.Release|x86.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

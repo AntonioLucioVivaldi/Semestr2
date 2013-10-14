@@ -6,11 +6,11 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{8F8DD470-3517-401A-A95B-CB37A86100C2}</ProjectGuid>
+    <ProjectGuid>{857F6CCC-43DD-43F3-9798-F2D55EAA46A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Fibonaccitests</RootNamespace>
-    <AssemblyName>Fibonaccitests</AssemblyName>
+    <RootNamespace>FibonacciTests</RootNamespace>
+    <AssemblyName>FibonacciTests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -49,8 +49,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\fibonacci\Fibonacci.csproj">
-      <Project>{16DB988C-B786-42FD-A4B9-9E40238C99F3}</Project>
+    <ProjectReference Include="..\Fibonacci\Fibonacci.csproj">
+      <Project>{3F6435A1-9221-4AD4-99BA-190C2E27AA48}</Project>
       <Name>Fibonacci</Name>
     </ProjectReference>
   </ItemGroup>
