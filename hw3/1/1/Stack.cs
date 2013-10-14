@@ -7,6 +7,9 @@ namespace _1
 {
     public class Stack
     {
+        /// <summary>
+        /// Stack constructor
+        /// </summary>
         private class StackElement
         {
             public int Val { get; set; }
@@ -14,13 +17,15 @@ namespace _1
             public StackElement Next { get; set; }
         }
 
-        private StackElement head;
+        /// <summary>
+        /// Head of stack
+        /// </summary>
+        private StackElement head = null;
 
-        public Stack()
-        {
-            head = null;
-        }
-
+        /// <summary>
+        /// Method is used to add a value to stack
+        /// </summary>
+        /// <param name="value"></param>
         public void Push(int value)
         {
             StackElement newElement = new StackElement();
@@ -29,18 +34,25 @@ namespace _1
             head = newElement;
         }
 
+        /// <summary>
+        /// Method is used to delete element from top of the stack
+        /// </summary>
+        /// <returns></returns>
         public int Pop()
         {
             if (head == null)
             {
-                Console.WriteLine("Empty stack");
-                return 0;
+                throw new EmptyStackException();
             }
             int toDelete = head.Val;
             head = head.Next;
             return toDelete;
         }
 
+        /// <summary>
+        /// Method used to check if stack empty or not
+        /// </summary>
+        /// <returns></returns>
         public bool isEmpty()
         {
             return head == null;

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace _1
 {
-    class Program
+    public class EmptyStackException : ApplicationException
     {
-        static void Main(string[] args)
+        public EmptyStackException()
         {
         }
     }

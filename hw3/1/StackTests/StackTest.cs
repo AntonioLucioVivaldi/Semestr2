@@ -17,6 +17,7 @@ namespace StackTests
             stack.Push(1);
             Assert.IsFalse(stack.isEmpty());
         }
+
         [TestMethod]
         public void PopTest()
         {
@@ -25,11 +26,20 @@ namespace StackTests
             var result = stack.Pop();
             Assert.AreEqual(2, result);
         }
+
         [TestMethod]
         public void isEmpty()
         {
             Stack stack = new Stack();
             Assert.IsTrue(stack.isEmpty());
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(EmptyStackException))]
+        public void EmptyStackExceptionTest()
+        {
+            Stack stack = new Stack();
+            stack.Pop();
         }
     }
 }
