@@ -7,6 +7,10 @@ namespace Spiral
 {
     public class Program
     {
+        /// <summary>
+        /// Method is used to print matrix
+        /// </summary>
+        /// <param name="array"></param>
         public static void PrintMatrix(int[,] array)
         {
             int n = 5;
@@ -21,6 +25,11 @@ namespace Spiral
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// Methid is used to sort matrix in a spiral
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
         public static int[] HelixSort(int[,] array) 
         {
             int k = 0;
@@ -57,15 +66,9 @@ namespace Spiral
             } while (length != array.GetLength(0));
             return array1;
         }
+
         static void Main(string[] args)
         {
-            int[,] array = { { 5, 6, 4, 7, 5 }, { 1, 2, 3, 2, 1 }, { 7, 8, 9, 6, 5 }, { 7, 0, 3, 6, 5 }, { 7, 8, 9, 6, 5 } };
-            
-            int[] array1 = HelixSort(array);
-            for (int i = 0; i < array.Length; i++)
-            {
-                Console.Write(array1[i] + " ");
-            }
         }
     }
 }
