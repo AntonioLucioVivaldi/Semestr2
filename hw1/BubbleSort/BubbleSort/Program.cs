@@ -7,6 +7,11 @@ namespace BubbleSort
 {
     public class Program
     {
+        /// <summary>
+        /// Method which sorts array
+        /// </summary>
+        /// <param name="array"></param>
+        /// <returns></returns>
         public static int[] Sort(int[] array)
         {
             for (int i = 0; i < array.Length; i++)
@@ -26,19 +31,6 @@ namespace BubbleSort
        
         static void Main(string[] args)
         {
-            int length = 10;
-            Console.WriteLine("Enter the array : \n");
-            int[] array = new int[length];
-            for (int i = 0; i < length; i++)
-            {
-                array[i] = Convert.ToInt32(Console.ReadLine());
-            }
-            Sort(array);
-            Console.WriteLine("Sorted arrray: \n");
-            for (int i = 0; i < length; i++)
-            {
-                Console.WriteLine(array[i] + " ");
-            }
         }
     }
 }
