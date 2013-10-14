@@ -11,12 +11,34 @@ namespace FactorialTests
     public class Factorialtest
     {
         [TestMethod]
-        public void factorialTest()
+        public void FactorialTest()
         {
             int check1 = 720;
             int check2 = 6;
-            check2 = Program.factorial(check2);
+            check2 = Program.Factorial(check2);
             Assert.AreEqual(check1, check2);
+        }
+
+        [TestMethod]
+        public void FacrorialTest1()
+        {
+            int check1 = 1;
+            int check2 = Program.Factorial(1);
+            Assert.AreEqual(check1, check2);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NegativeNumberAndZeroException))]
+        public void TestZeroException()
+        {
+            int check = Program.Factorial(0);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NegativeNumberAndZeroException))]
+        public void TestNegativeNumberException()
+        {
+            int check = Program.Factorial(-10);
         }
     }
 }

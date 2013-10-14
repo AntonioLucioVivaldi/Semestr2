@@ -7,17 +7,24 @@ namespace Factorial
 {
     public class Program
     {
-        public static int factorial(int k)
+        /// <summary>
+        /// Method used for factorial calculation
+        /// </summary>
+        /// <param name="k"></param>
+        /// <returns></returns>
+        public static int Factorial(int number)
         {
-            if (k == 1)
+            if (number < 1)
+            {
+                throw new NegativeNumberAndZeroException();
+            }
+            if (number == 1)
                 return 1;
-            return k = k * factorial(k - 1);
+            return number * Factorial(number - 1);
         }
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Enter the number: \n");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine(factorial(n));
         }
     }
 }
