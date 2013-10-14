@@ -8,24 +8,6 @@ namespace Spiral
     public class Program
     {
         /// <summary>
-        /// Method is used to print matrix
-        /// </summary>
-        /// <param name="array"></param>
-        public static void PrintMatrix(int[,] array)
-        {
-            int n = 5;
-            for (int i = 0; i < n; i++)
-            {
-                for (int j = 0; j < n; j++)
-                {
-                    Console.Write(array[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
-            Console.WriteLine();
-        }
-
-        /// <summary>
         /// Methid is used to sort matrix in a spiral
         /// </summary>
         /// <param name="array"></param>
