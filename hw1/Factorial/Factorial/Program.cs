@@ -7,6 +7,11 @@ namespace Factorial
 {
     public class Program
     {
+        /// <summary>
+        /// Method is used to calculate factorial of a number
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public static int Factorial(int number)
         {
             if (number < 0)
