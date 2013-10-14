@@ -7,6 +7,11 @@ namespace Fibonacci
 {
     public class Program
     {
+        /// <summary>
+        /// Method is used to calculate Fibonacci number
+        /// </summary>
+        /// <param name="number"></param>
+        /// <returns></returns>
         public static int Fibonacci(int number)
         {
             if (number < 0)
