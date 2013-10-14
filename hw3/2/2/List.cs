@@ -7,19 +7,24 @@ namespace _2
 {
     public class List
     {
+        /// <summary>
+        /// Class used to build list
+        /// </summary>
         private class ListElement
         {
             public int Value { get; set; }
             public ListElement Next { get; set; }
         }
 
-        private ListElement firstElement;
+        /// <summary>
+        /// First element of list
+        /// </summary>
+        private ListElement firstElement = null;
 
-        public List()
-        {
-            firstElement = null;
-        }
-
+        /// <summary>
+        /// Methos is used to add an element to list
+        /// </summary>
+        /// <param name="value"></param>
         public void AddElement(int value)
         {
             ListElement newListElement = new ListElement();
@@ -39,11 +44,15 @@ namespace _2
             }
         }
 
+        /// <summary>
+        /// Method is used to delete an element from list
+        /// </summary>
+        /// <param name="value"></param>
         public void DeleteElement(int value)
         {
-            if (firstElement == null)
+            if (IsEmpty())
             {
-                Console.WriteLine("List is Empty \n ");
+                throw new EmptyListException();
             }
             else
             {
@@ -70,11 +79,14 @@ namespace _2
             }
         }
 
+        /// <summary>
+        /// Method is used to print list
+        /// </summary>
         public void PrintList()
         {
-            if (firstElement == null)
+            if (IsEmpty())
             {
-                Console.WriteLine("List is empty \n");
+                throw new EmptyListException();
             }
             else
             {
@@ -87,6 +99,10 @@ namespace _2
             }
         }
 
+        /// <summary>
+        /// Method is used to check if list is empty
+        /// </summary>
+        /// <returns></returns>
         public bool IsEmpty()
         {
             return firstElement == null; 

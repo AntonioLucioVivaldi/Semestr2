@@ -5,9 +5,9 @@ using System.Text;
 
 namespace _2
 {
-    public class Program
+    public class EmptyListException : ApplicationException
     {
-        static void Main(string[] args)
+        public EmptyListException()
         {
         }
     }
