@@ -14,9 +14,13 @@ namespace Factorial
         /// <returns></returns>
         public static int Factorial(int number)
         {
-            if (number < 1)
+            if (number < 0)
             {
-                throw new NegativeNumberAndZeroException();
+                throw new NegativeNumberException();
+            }
+            if (number == 0)
+            {
+                return 1;
             }
             if (number == 1)
                 return 1;
