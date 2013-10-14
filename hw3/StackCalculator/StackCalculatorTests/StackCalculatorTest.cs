@@ -14,12 +14,12 @@ namespace StackCalculatorTests
         public void AddTest()
         {
             Calculator calculator = new Calculator();
-            calculator.Push(10);
             calculator.Push(20);
             calculator.Push(40);
             calculator.Add();
             Assert.AreEqual(calculator.Result(), 60);
         }
+
         [TestMethod]
         public void SubtractTest()
         {
@@ -29,6 +29,7 @@ namespace StackCalculatorTests
             calculator.Subtract();
             Assert.AreEqual(calculator.Result(), 20);
         }
+
         [TestMethod]
         public void MultiplyTest()
         {
@@ -38,6 +39,7 @@ namespace StackCalculatorTests
             calculator.Multiply();
             Assert.AreEqual(calculator.Result(), 800);
         }
+
         [TestMethod]
         public void DivideTest()
         {
@@ -47,12 +49,22 @@ namespace StackCalculatorTests
             calculator.Divide();
             Assert.AreEqual(calculator.Result(), 2);
         }
+
         [TestMethod]
         public void ResultTest()
         {
             Calculator calculator = new Calculator();
             calculator.Push(10);
             Assert.AreEqual(calculator.Result(), 10);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(NotEnoughNumbersException))]
+        public void NotEnoughNumbersExceptionTest()
+        {
+            Calculator calculator = new Calculator();
+            calculator.Push(20);
+            calculator.Multiply();
         }
     }
 }

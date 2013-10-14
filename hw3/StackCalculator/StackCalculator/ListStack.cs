@@ -7,6 +7,9 @@ namespace StackCalculator
 {
     public class ListStack : IStack
     {
+        /// <summary>
+        /// Stack constructor
+        /// </summary>
         private class StackElement
         {
             public int Value { get; set; }
@@ -15,8 +18,15 @@ namespace StackCalculator
 
         }
 
+        /// <summary>
+        /// Head of stack
+        /// </summary>
         private StackElement head = null;
 
+        /// <summary>
+        /// Method which adds an element to stack
+        /// </summary>
+        /// <param name="value"></param>
         public void Push(int value)
         {
             StackElement newStackElement = new StackElement();
@@ -25,12 +35,15 @@ namespace StackCalculator
             head = newStackElement;
         }
 
+        /// <summary>
+        /// Method which deletes an element from top of stack
+        /// </summary>
+        /// <returns></returns>
         public int Pop()
         {
             if (head == null)
             {
-                Console.WriteLine("Stack is empty");
-                return 0;
+                throw new IsEmptyException();
             }
             int toDelete = head.Value;
             head = head.Next;

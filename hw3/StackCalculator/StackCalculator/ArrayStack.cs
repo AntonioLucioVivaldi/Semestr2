@@ -8,29 +8,40 @@ namespace StackCalculator
 
     public class ArrayStack : IStack
     {
-        private int length;
-        private int[] array;
-
+        /// <summary>
+        /// Stack constructor
+        /// </summary>
         public ArrayStack()
         {
             length = 0;
             array = new int[100];
         }
 
+        private int length;
+        private int[] array;
+
+        /// <summary>
+        /// Method is used to check if stack is empty
+        /// </summary>
+        /// <returns></returns>
         public bool IsEmpty()
         {
-            if (length == 0)
-            {
-                Console.WriteLine("Stack is empty");
-            }
-            return (length == 0);
+            return length == 0;
         }
 
+        /// <summary>
+        /// Method is used 
+        /// </summary>
+        /// <returns></returns>
         private bool CheckLength()
         {
             return (array.Length - 2 > length);
         }
 
+        /// <summary>
+        /// Method is used to add an element
+        /// </summary>
+        /// <param name="value"></param>
         public void Push(int value)
         {
             if (!(CheckLength()))
@@ -46,11 +57,15 @@ namespace StackCalculator
             length++;
         }
 
+        /// <summary>
+        /// Method is used to delete an element
+        /// </summary>
+        /// <returns></returns>
         public int Pop()
         {
             if (IsEmpty())
             {
-                return 0;
+                throw new IsEmptyException();
             }
             int temp = array[length - 1];
             length--;
