@@ -7,11 +7,6 @@ namespace Factorial
 {
     public class Program
     {
-        /// <summary>
-        /// Method used for factorial calculation
-        /// </summary>
-        /// <param name="k"></param>
-        /// <returns></returns>
         public static int Factorial(int number)
         {
             if (number < 0)
@@ -26,7 +21,6 @@ namespace Factorial
                 return 1;
             return number * Factorial(number - 1);
         }
-
         static void Main(string[] args)
         {
         }

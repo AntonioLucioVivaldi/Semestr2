@@ -6,7 +6,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{E9C47A94-B34B-430C-AD19-4625B84C54A8}</ProjectGuid>
+    <ProjectGuid>{7D7CB491-C616-4D2F-9146-53F3272A3B4B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>FactorialTests</RootNamespace>
@@ -45,12 +45,12 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="FactorialTests.cs" />
+    <Compile Include="FactorialTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Factorial\Factorial.csproj">
-      <Project>{1A5E485C-4E1A-4CCA-A3CC-DC209553F2DC}</Project>
+      <Project>{6FCDD025-9CD0-4953-A4C1-1859F8935E61}</Project>
       <Name>Factorial</Name>
     </ProjectReference>
   </ItemGroup>

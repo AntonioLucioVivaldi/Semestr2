@@ -11,7 +11,7 @@ namespace FactorialTests
     public class FactorialTest
     {
         [TestMethod]
-        public void FactorialTest()
+        public void TestFactorial()
         {
             int check1 = 720;
             int check2 = 6;
@@ -20,7 +20,7 @@ namespace FactorialTests
         }
 
         [TestMethod]
-        public void FacrorialTest1()
+        public void TestFactorial1()
         {
             int check1 = 1;
             int check2 = Program.Factorial(1);
@@ -28,17 +28,17 @@ namespace FactorialTests
         }
 
         [TestMethod]
-        [ExpectedException(typeof(NegativeNumberAndZeroException))]
-        public void TestZeroException()
+        public void TestZero()
         {
             int check = Program.Factorial(0);
+            Assert.AreEqual(check, 1);
         }
 
         [TestMethod]
-        [ExpectedException(typeof(NegativeNumberAndZeroException))]
+        [ExpectedException(typeof(NegativeNumberException))]
         public void TestNegativeNumberException()
         {
-            int check = Program.Factorial(-10);
+            int check = Program.Factorial(-5);
         }
     }
 }
