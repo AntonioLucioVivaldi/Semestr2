@@ -6,11 +6,11 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3CDDE15F-3C16-4984-8F4C-9379DEC1DA5C}</ProjectGuid>
+    <ProjectGuid>{FEF2B804-E28D-4D31-AAEF-7540ABDCBF84}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ListStackTests</RootNamespace>
-    <AssemblyName>ListStackTests</AssemblyName>
+    <RootNamespace>CalculatorTests</RootNamespace>
+    <AssemblyName>CalculatorTests</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -45,12 +45,12 @@
     </CodeAnalysisDependentAssemblyPaths>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ListStackTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StackTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StackCalculator\StackCalculator.csproj">
-      <Project>{867E7D8C-03FC-4D49-97BC-84D2D2499866}</Project>
+      <Project>{9E8F4389-B7C4-4C24-B0D3-E19060C5C88D}</Project>
       <Name>StackCalculator</Name>
     </ProjectReference>
   </ItemGroup>
