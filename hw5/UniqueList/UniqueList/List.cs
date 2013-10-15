@@ -35,13 +35,13 @@ namespace UniqueList
             }
             else
             {
+                if (Exists(value))
+                {
+                    throw new AlreadyExistsException();
+                }
                 ListElement pointer = firstElement;
                 while (pointer.Next != null)
                 {
-                    if (Exists(value))
-                    {
-                        throw new AlreadyExistsException();
-                    }
                     pointer = pointer.Next;
                 }
                 pointer.Next = newListElement;
@@ -115,9 +115,9 @@ namespace UniqueList
         public bool Exists(int value)
         {
             ListElement pointer = firstElement;
-            while (pointer.Next != null)
+            while (pointer != null)
             {
-                if (pointer.Next.Value == value)
+                if (pointer.Value == value)
                 {
                     return true;
                 }
