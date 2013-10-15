@@ -15,7 +15,7 @@ namespace Fold
             }
             foreach (int element in list)
             {
-                value = function(value, list[element]);
+                value = function(value, element);
             }
             return value;
         }
