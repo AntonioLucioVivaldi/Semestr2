@@ -28,6 +28,24 @@ namespace ListTests
         }
 
         [TestMethod]
+        public void AddToPositionTest()
+        {
+            List list = new List();
+            list.AddToPosition(0, 0);
+            Assert.IsFalse(list.IsEmpty());
+        }
+
+        [TestMethod]
+        public void AddToPositionTest2()
+        {
+            List list = new List();
+            list.AddToPosition(3, 0);
+            list.AddToPosition(4, 1);
+            list.DeleteElement(4);
+            Assert.AreEqual(list.GetFirst(), 3);
+        }
+
+        [TestMethod]
         public void IsEmptyTest()
         {
             List list = new List();

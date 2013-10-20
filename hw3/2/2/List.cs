@@ -20,6 +20,7 @@ namespace _2
         /// First element of list
         /// </summary>
         private ListElement firstElement = null;
+        private int length = 0;
 
         /// <summary>
         /// Methos is used to add an element to list
@@ -42,6 +43,40 @@ namespace _2
                 }
                 pointer.Next = newListElement;
             }
+            length++;
+        }
+
+        /// <summary>
+        /// Method is used to add an element to a current position
+        /// </summary>
+        /// <param name="value">value</param>
+        /// <param name="index">position</param>
+        public void AddToPosition(int value, int index)
+        {
+            ListElement pointer = firstElement;
+            ListElement newListElement = new ListElement();
+            newListElement.Value = value;
+            if (IsEmpty())
+            {
+                firstElement = newListElement;
+            }
+            else
+            {
+                if (index == 0)
+                {
+                    firstElement = newListElement;
+                    newListElement.Next = firstElement.Next;
+                }
+                else
+                {
+                    for (int i = 0; i < index; i++)
+                    {
+                        pointer = pointer.Next;
+                    }
+                    newListElement.Next = pointer.Next;
+                }
+            }
+            length++;
         }
 
         /// <summary>
@@ -77,6 +112,7 @@ namespace _2
                     pointer.Next = pointer.Next.Next;
                 }
             }
+            length--;
         }
 
         /// <summary>
@@ -97,6 +133,20 @@ namespace _2
                     pointer = pointer.Next;
                 }
             }
+        }
+
+        /// <summary>
+        /// Value of length
+        /// </summary>
+        /// <returns></returns>
+        public int Length()
+        {
+            return length;
+        }
+
+        public int GetFirst()
+        {
+            return firstElement.Value;
         }
 
         /// <summary>
